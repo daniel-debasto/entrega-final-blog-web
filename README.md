@@ -23,8 +23,8 @@ Este es el proyecto consolidado para la entrega final del módulo de Python y Dj
 
 ## 🛠️ Tecnologías Utilizadas
 
-* **Python 3**
-* **Django 6**
+* **Python 3.12+** (Versión mínima requerida)
+* **Django 6.1.1**
 * **Pillow** (Procesamiento y validación de imágenes)
 * **SQLite** (Base de datos local)
 * **HTML5 / CSS3** (Estilos personalizados e interfaz web responsiva)
@@ -33,24 +33,26 @@ Este es el proyecto consolidado para la entrega final del módulo de Python y Dj
 
 ## 🔧 Instrucciones de Instalación y Ejecución
 
+> **Nota de configuración:** El proyecto utiliza configuración directa en `blog_project/settings.py` lista para entorno de desarrollo local, por lo que no requiere configurar archivos `.env` externos.
+
 Seguí estos pasos para clonar el repositorio, reconstruir el entorno y ejecutar el proyecto desde cero localmente:
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/daniel-debasto/blog_django.git
-cd blog_django
+git clone https://github.com
+cd entrega-final-blog-web
 ```
 
 ### 2. Crear y activar el entorno virtual
 * **En Windows (PowerShell):**
   ```bash
-  python -m venv env
-  ./env/Scripts/Activate.ps1
+  python -m venv venv
+  ./venv/Scripts/Activate.ps1
   ```
 * **En macOS/Linux:**
   ```bash
-  python3 -m venv env
-  source env/bin/activate
+  python3 -m venv venv
+  source venv/bin/activate
   ```
 
 ### 3. Instalar las dependencias
@@ -62,8 +64,6 @@ pip install -r requirements.txt
 ### 4. Ejecutar las migraciones
 Creá la estructura de las tablas en tu base de datos local:
 ```bash
-python manage.py makemigrations accounts
-python manage.py makemigrations posts
 python manage.py migrate
 ```
 
@@ -78,7 +78,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-Una vez iniciado, abrí tu navegador e ingresá a: `http://127.0.0`
+Una vez iniciado, abrí tu navegador e ingresá a: `http://127.0.0.1:8000`
 
 ---
 
